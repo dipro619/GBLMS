@@ -25,8 +25,9 @@ if (require.main === module) {
 
 /* ───────────────────────── config ───────────────────────── */
 const port = process.env.PORT || 4000;
-// on hosting platforms (Render sets RENDER=true) the server must listen on 0.0.0.0, otherwise the platform cannot reach it
-const HOST = process.env.HOST || (process.env.RENDER ? '0.0.0.0' : 'localhost');
+// Hosting platforms (Render, Railway, Heroku…) always provide PORT and need the server on 0.0.0.0, otherwise they report
+// "No open ports detected". On your own computer (no PORT set) it stays on localhost for safety. HOST in the environment wins.
+const HOST = process.env.HOST || ((process.env.PORT || process.env.RENDER) ? '0.0.0.0' : 'localhost');
 // project layout: gblms/frontend (public website) · gblms/admin (admin + member portal) · gblms/backend (this file, API, data)
 const ROOT = path.join(__dirname, '..');
 const FRONTEND_DIR = path.join(ROOT, 'frontend');
