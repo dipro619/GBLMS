@@ -1,0 +1,14 @@
+{
+  "name": "gblms-backend",
+  "version": "1.0.0",
+  "description": "GBLMS – Gono Bishwabidyalay Library Management System (zero-dependency Node.js backend; serves ../frontend and ../admin)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node test.js"
+  },
+  "engines": { "node": ">=18" },
+  "license": "MIT",
+  "private": true
+}

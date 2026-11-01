@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Portal · GBLMS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/theme.css?v=5">
+  <link rel="stylesheet" href="/portal.css?v=5">
+  <link rel="stylesheet" href="/chat.css?v=1">
+  <style>h1,h2,h3,h4{font-family:var(--font-display);letter-spacing:-.025em;font-weight:600}</style>
+</head>
+<body>
+  <div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div>
+  <header class="top glass">
+    <a class="brand" href="/"><svg viewBox="0 0 24 24"><path d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25"/></svg>GBLMS</a>
+    <span class="sp"></span>
+    <div class="who" id="who"></div>
+    <a class="btn sm" href="/">Website</a>
+    <button class="btn icon-btn" id="lang" type="button" aria-label="Language" style="font-weight:600">বাং</button>
+    <button class="btn icon-btn" id="theme" aria-label="Toggle dark or light mode"><svg class="ic" viewBox="0 0 24 24"><path d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"/></svg></button>
+    <button class="btn sm danger" id="logout">Log out</button>
+  </header>
+  <main class="wrap">
+    <div class="head"><span class="eyebrow" id="eyebrow"></span><h1 id="title">Loading…</h1><p id="sub"></p></div>
+    <nav class="tabs" id="tabs" aria-label="Portal sections"></nav>
+    <section id="view"><div class="loading">Loading…</div></section>
+  </main>
+  <dialog id="dlg"></dialog>
+  <div id="toasts" aria-live="polite"></div>
+  <script src="/i18n.js?v=1"></script>
+  <script src="/portal.js?v=6"></script>
+  <script src="/chat.js?v=1"></script>
+</body>
+</html>
