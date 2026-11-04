@@ -1,0 +1,10 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "cp admin/portal.html admin/portal.js admin/portal.css frontend/",
+  "outputDirectory": "frontend",
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/api/:path*", "destination": "https://YOUR-SERVICE.onrender.com/api/:path*" },
+    { "source": "/files/:path*", "destination": "https://YOUR-SERVICE.onrender.com/files/:path*" }
+  ]
+}
